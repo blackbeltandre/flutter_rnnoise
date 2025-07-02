@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- PENTING: Izinkan 127.0.0.1 untuk traffic HTTP cleartext -->
+        <domain includeSubdomains="true">127.0.0.1</domain>
+        <!-- Jika Anda juga perlu mengakses 10.0.0.2, tambahkan juga di sini
+             <domain includeSubdomains="true">10.0.0.2</domain> -->
+    </domain-config>
+</network-security-config>
