@@ -346,7 +346,7 @@ class _MeetingRoomScreenState extends State<MeetingRoomScreen> with TickerProvid
     // 4. Connect to WebSocket signaling server
     try {
       // Ganti dengan alamat IP server Anda jika bukan localhost, atau URL domain
-      _wsChannel = WebSocketChannel.connect(Uri.parse('ws://192.168.61.233:8080'));
+      _wsChannel = WebSocketChannel.connect(Uri.parse('wss://wswebrtc-production.up.railway.app'));
       print("Flutter: WebSocket connected.");
 
       _wsChannel?.stream.listen(
